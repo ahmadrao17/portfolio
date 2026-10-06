@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Ahmad - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">
+            Muhammad Ahmad
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="#about">
+                    About
+                </a>
+
+            </li>
+            <li>
+                <a href="#experience">
+                    Experience
+                </a>
+            </li>
+            <li>
+                <a href="#projects">
+                    Projects
+                </a>
+            </li>
+            <li>
+                <a href="#contact">
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">
+            Muhammad Ahmad
+        </div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li>
+                    <a href="#about" onclick="toggleMenu()">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="#experience" onclick="toggleMenu()">
+                        Experience
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects" onclick="toggleMenu()">
+                        Projects
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" onclick="toggleMenu()">
+                        Contact
+                    </a>
+                </li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="profile.jpg" alt="Muhammad Ahmad" class="profile-image">
+        </div>
+        <div class="section__text">
+            <p class="section___text-p1">
+                Hello, I'm
+            </p>
+            <h1 class="title">Muhammad Ahmad</h1>
+            <p id="element"></p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('resume.pdf')">
+                    View Resume
+                </button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                    Hire Me
+                </button>
+            </div>
+            <div id="social-container">
+                <a href="https://github.com/ahmadrao17" target="_blank" class="icons">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/ahmadrao17/" target="_blank" class="icons">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section___text-p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img src="profile.jpg" alt="Muhammad Ahmad" class="about-image">
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <i class="fas fa-trophy icons"></i>
+                        <h3>Experience</h3>
+                        <p>1+ Years<br>Software Engineer</p>
+                    </div>
+                    <div class="details-container">
+                        <i class="fas fa-user-graduate icons"></i>
+                        <h3>Education</h3>
+                        <p>Bachelors of Science,<br>Computer Science</p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p>I’m a software engineer specializing in mobile app development and AI integration. I help
+                        businesses and teams build scalable, userfriendly applications by combining real-time features,
+                        clean UI/UX, and smart backend systems. With experience in Flutter, Firebase, and
+                        Python-based AI tools, I’ve developed everything from chatbots to management
+                        platforms—delivering reliable, high-quality solutions that
+                        drive real impact.</p>
+                </div>
+            </div>
+        </div>
+        <a href="#experience" class="icons arrow">
+            <i class="fa-solid fa-angles-down"></i>
+        </a>
+    </section>
+    <section id="experience">
+        <p class="section___text-p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">
+                        AI Engineer
+                    </h2>
+                    <div class="article-container">
+                        <article>
+                            <i class="fa-solid fa-circle-check icon"></i>
+                            <div>
+                                <h3>Open AI</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-circle-check icon"></i>
+                            <div>
+
+                                <h3>Assistant Api</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-circle-check icon"></i>
+                            <div>
+
+                                <h3>Prompt Engineering</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-circle-check icon"></i>
+                            <div>
+
+                                <h3>Fine-Tuning</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="details-container">
+                    <h2 class="experience-sub-title">
+                        Flutter Developer
+                    </h2>
+                    <div class="article-container">
+                        <article>
+                            <i class="fa-solid fa-circle-check icon"></i>
+                            <div>
+
+                                <h3>Dart</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-circle-check icon"></i>
+                            <div>
+                                <h3>Responsive UI</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-circle-check icon"></i>
+                            <div>
+                                <h3>Firebase</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-circle-check icon"></i>
+                            <div>
+                                <h3>API Integration</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-circle-check icon"></i>
+                            <div>
+                                <h3>Messaging</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-circle-check icon"></i>
+                            <div>
+                                <h3>Google APIs</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="details-container">
+                    <h2 class="experience-sub-title">
+                        Python Developer
+                    </h2>
+                    <div class="article-container">
+                        <article>
+                            <i class="fa-solid fa-circle-check icon"></i>
+                            <div>
+                                <h3>Django</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-circle-check icon"></i>
+                            <div>
+                                <h3>Flask</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-circle-check icon"></i>
+                            <div>
+                                <h3>JavaScript</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-circle-check icon"></i>
+                            <div>
+                                <h3>PostgreSQL</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-circle-check icon"></i>
+                            <div>
+                                <h3>HTML</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-circle-check icon"></i>
+                            <div>
+                                <h3>CSS</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#projects" class="icons arrow">
+            <i class="fa-solid fa-angles-down"></i>
+        </a>
+    </section>
+    <section id="projects">
+        <p class="section___text-p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="gaggle.jpg" alt="Project 1" class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title">
+                        Gaggle
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quaerat vel fugit illo, ad
+                        excepturi delectus nihil tempora atque dignissimos impedit et deserunt!
+                    </p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/ahmadrao17/figgi_app'">
+                            Github
+                        </button>
+                    </div>
+                </div>
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="audio_quran.jpg" alt="Project 1" class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title">
+                        Audio Quran
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quaerat vel fugit illo, ad
+                        excepturi delectus nihil tempora atque dignissimos impedit et deserunt!
+                    </p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/ahmadrao17/figgi_app'">
+                            Github
+                        </button>
+                    </div>
+                </div>
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="bayan-ul-quran.jpg" alt="Project 1" class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title">
+                        Bayan-ul-Quran
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quaerat vel fugit illo, ad
+                        excepturi delectus nihil tempora atque dignissimos impedit et deserunt!
+                    </p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/ahmadrao17/figgi_app'">
+                            Github
+                        </button>
+                    </div>
+                </div>
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="sms_compaign.jpg" alt="Project 1" class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title">
+                        SMS Compaign
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quaerat vel fugit illo, ad
+                        excepturi delectus nihil tempora atque dignissimos impedit et deserunt!
+                    </p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/ahmadrao17/figgi_app'">
+                            Github
+                        </button>
+                    </div>
+                </div>
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="kitaab_house.jpg" alt="Project 1" class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title">
+                        Kitaab House
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quaerat vel fugit illo, ad
+                        excepturi delectus nihil tempora atque dignissimos impedit et deserunt!
+                    </p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/ahmadrao17/figgi_app'">
+                            Github
+                        </button>
+                    </div>
+                </div>
+                <div class="details-container color-container">
+                    <div class="article-container">
+                        <img src="tenant_admin_app.jpg" alt="Project 1" class="project-img">
+                    </div>
+                    <h2 class="experience-sub-title project-title">
+                        Tenant Admin App
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum quaerat vel fugit illo, ad
+                        excepturi delectus nihil tempora atque dignissimos impedit et deserunt!
+                    </p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn"
+                            onclick="location.href='https://github.com/ahmadrao17/figgi_app'">
+                            Github
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#contact" class="icons arrow">
+            <i class="fa-solid fa-angles-down"></i>
+        </a>
+    </section>
+    <section id="contact">
+        <p class="section___text-p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="details-container contact-info-container">
+                <form id="contactForm">
+                    <div class="row">
+                        <div class="field">
+                            <h3>First Name</h3>
+                            <input type="text" name="first_name" placeholder="First Name" required />
+                        </div>
+                        <div class="field">
+                            <h3>Last Name</h3>
+                            <input type="text" name="last_name" placeholder="Last Name" required />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="field">
+                            <h3>Email</h3>
+                            <input type="email" name="email" placeholder="your@email.com" required />
+                        </div>
+                        <div class="field">
+                            <h3>Phone</h3>
+                            <input type="text" name="phone" placeholder="03XX XXXXXXX" required />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="field subject">
+                            <h3>Subject</h3>
+                            <input type="text" name="subject" placeholder="Subject" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="field message">
+                            <h3>Message</h3>
+                            <textarea name="message" placeholder="Describe your query here..." rows="6"
+                                required></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-color-1 submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <a href="#" class="icons arrow">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+    </section>
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li>
+                        <a href="#about">
+                            About
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="#experience">
+                            Experience
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#projects">
+                            Projects
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <p>&#169; 2025 Muhammad Ahmad. All Rights Reserved</p>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
