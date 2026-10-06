@@ -141,9 +141,6 @@ function App() {
 
       <main id="main">
         <section className="hero" aria-labelledby="hero-title">
-          <div className="hero-image">
-            <img src="/portrait-professional.png" alt="Portrait of Muhammad Ahmad" />
-          </div>
           <div className="hero-inner page-width">
             <div className="hero-copy">
               <p className="eyebrow hero-eyebrow"><span className="eyebrow-line" /> Software engineer / Lahore</p>
