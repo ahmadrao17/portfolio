@@ -3,6 +3,7 @@ import {
   ArrowDownRight,
   ArrowRight,
   ArrowUpRight,
+  Download,
   Mail,
   Menu,
   X,
@@ -122,8 +123,14 @@ function App() {
             <a href="#contact" onClick={closeMenu}>Contact</a>
           </nav>
 
-          <a className="header-contact" href={`mailto:${email}`}>
-            Let's talk <ArrowUpRight size={16} strokeWidth={1.8} aria-hidden="true" />
+          <a
+            className="header-contact"
+            href={`${import.meta.env.BASE_URL}Muhammad_Ahmad_Resume.pdf`}
+            download="Muhammad_Ahmad_Resume.pdf"
+            aria-label="Download résumé PDF"
+            title="Download résumé PDF"
+          >
+            Résumé <Download size={16} strokeWidth={1.8} aria-hidden="true" />
           </a>
           <button
             className="menu-button"
