@@ -17,64 +17,94 @@ const projects = [
     name: 'GWG Platform',
     domain: 'Compliance technology',
     description:
-      'Helping teams manage complex compliance work through clearer review flows, dependable backend behavior, and practical product improvements.',
-    focus: ['Python', 'Django', 'Workflow design'],
+      'Building role-specific review queues, KYC dossiers, screening workflows, and auditable forms for a multi-tenant Swiss AML platform.',
+    focus: ['Django', 'DRF', 'React', 'TypeScript'],
+    url: 'https://www.gwg-plattform.ch/en/home-2/',
   },
   {
     number: '02',
-    name: 'ATTDE',
-    domain: 'Events and community',
-    description:
-      'Building backend features for an events platform, with attention to onboarding, content flows, integrations, and production reliability.',
-    focus: ['Django', 'APIs', 'Integrations'],
-  },
-  {
-    number: '03',
     name: 'SpexBot',
     domain: 'Healthcare automation',
     description:
-      'Creating automation that connects day-to-day healthcare operations with external practice systems, reducing repetitive work for teams.',
-    focus: ['Python', 'Selenium', 'Automation'],
+      'Automating claims, eligibility, inventory, and order workflows across optical practice systems, EHRs, and insurers.',
+    focus: ['Django', 'Selenium', 'Celery', 'React'],
+    url: 'https://spexbot.com/',
+  },
+  {
+    number: '03',
+    name: 'ATTDE',
+    domain: 'Events and community',
+    description:
+      'Building onboarding and organization-owned content workflows, and improving Stripe checkout and webhook behavior.',
+    focus: ['Django', 'Celery', 'PostgreSQL', 'Stripe'],
+    url: 'https://www.allthethingstodoeverywhere.com/home',
   },
   {
     number: '04',
-    name: 'AI Voice and Chat Support Agent',
-    domain: 'Customer support automation',
+    name: 'Gaggle App',
+    domain: 'Mobile application',
     description:
-      'Built a voice and chat assistant that answers product questions and helps turn customer conversations into actionable leads.',
-    focus: ['OpenAI API', 'Flask', 'Odoo API'],
+      'Built provider discovery with location, age, rating, and provider filters, plus favorites, follows, reviews, and Firebase features.',
+    focus: ['Flutter', 'Firebase', 'Firestore'],
+    url: 'https://play.google.com/store/apps/details?id=com.flock.team.app',
   },
   {
     number: '05',
-    name: 'AI Support Assistant',
-    domain: 'Knowledge-based support',
+    name: 'Audio Quran',
+    domain: 'Mobile audio application',
     description:
-      'Created a reusable assistant workflow for ingesting knowledge files, updating responses, and testing support conversations.',
-    focus: ['Python', 'OpenAI API', 'Vector stores'],
+      'Developed a cross-platform recitation player with downloads, favorites, repeat playback, and in-app purchases.',
+    focus: ['Flutter', 'Firebase', 'In-app purchases'],
+    url: 'https://play.google.com/store/apps/details?id=com.ahsan.audioquran&hl=en',
   },
   {
     number: '06',
-    name: 'Backend Social Feed API',
-    domain: 'Content platform API',
+    name: 'Bayan ul Quran',
+    domain: 'Mobile reference application',
     description:
-      'Structured a social feed backend around users, content, permissions, and clear REST endpoints for future product features.',
-    focus: ['Django', 'DRF', 'REST APIs'],
+      'Rebuilt an Islamic reference app in Flutter with recitation, Ayat search, multilingual content, and Tafseer lectures.',
+    focus: ['Flutter', 'Dart', 'Mobile'],
+    url: 'https://play.google.com/store/apps/details?id=com.app.drisrar&hl=en',
   },
   {
     number: '07',
-    name: 'AI Course Test Generator',
-    domain: 'Education automation',
+    name: 'AI Voice and Chat Support Agent',
+    domain: 'Customer support automation',
     description:
-      'Turned course material into multiple-choice assessments with an API workflow and ready-to-use spreadsheet output.',
-    focus: ['Python', 'Flask', 'OpenAI API'],
+      'Built a voice and chat agent for product questions, with Flask and Odoo integrations for knowledge updates and lead creation.',
+    focus: ['OpenAI API', 'ElevenLabs', 'Flask', 'Odoo'],
   },
   {
     number: '08',
-    name: 'Flutter / Firebase Mobile App',
-    domain: 'Mobile application',
+    name: 'AI Chat Assistant - Nurtureful Psychology',
+    domain: 'Website guidance',
     description:
-      'Developed mobile screens and supporting Firebase features, including notifications and cloud functions.',
-    focus: ['Flutter', 'Dart', 'Firebase'],
+      'Created a website assistant using a structured company profile and retrieval-augmented responses to guide visitors.',
+    focus: ['OpenAI API', 'RAG', 'Chatbot'],
+  },
+  {
+    number: '09',
+    name: 'AI Course Test Generator',
+    domain: 'Education automation',
+    description:
+      'Turned uploaded course material into multiple-choice tests through a Flask API that returns formatted Excel files.',
+    focus: ['Python', 'Flask', 'OpenAI API'],
+  },
+  {
+    number: '10',
+    name: 'AI Support Assistant',
+    domain: 'Knowledge-based support',
+    description:
+      'Created reusable scripts for assistant setup, knowledge-file ingestion, instruction updates, and support-conversation tests.',
+    focus: ['Python', 'OpenAI API', 'Vector stores'],
+  },
+  {
+    number: '11',
+    name: 'Backend Social Feed API',
+    domain: 'Content platform API',
+    description:
+      'Structured a social feed backend around users, content, permissions, serializers, and REST endpoints.',
+    focus: ['Django', 'DRF', 'django-filter'],
   },
 ]
 
@@ -97,6 +127,20 @@ function SocialLink({ href, label, children }) {
   return (
     <a className="social-link" href={href} target="_blank" rel="noreferrer" aria-label={label} title={label}>
       {children}
+    </a>
+  )
+}
+
+function ProjectTitle({ project }) {
+  if (!project.url) return project.name
+
+  const lastSpace = project.name.lastIndexOf(' ')
+  const prefix = lastSpace < 0 ? '' : `${project.name.slice(0, lastSpace)} `
+  const lastWord = project.name.slice(lastSpace + 1)
+
+  return (
+    <a className="project-link" href={project.url} target="_blank" rel="noopener noreferrer" title={`View ${project.name}`}>
+      {prefix}<span className="project-link-tail">{lastWord}<ArrowUpRight size={23} strokeWidth={1.7} aria-hidden="true" /></span>
     </a>
   )
 }
@@ -187,7 +231,7 @@ function App() {
                   <span className="project-number">{project.number}</span>
                   <div className="project-main">
                     <p className="project-domain">{project.domain}</p>
-                    <h3>{project.name}</h3>
+                    <h3><ProjectTitle project={project} /></h3>
                     <p className="project-description">{project.description}</p>
                   </div>
                   <div className="project-side">

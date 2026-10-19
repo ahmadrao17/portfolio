@@ -67,6 +67,10 @@ img { display: block; max-width: 100%; }
 .project-number { color: #f1bd69; font-size: 13px; font-weight: 700; padding-top: 6px; }
 .project-domain { color: #73e3e2; font-size: 11px; font-weight: 750; text-transform: uppercase; margin: 0 0 12px; }
 .project-main h3 { margin: 0; font-size: clamp(31px, 3.4vw, 48px); line-height: 1.08; font-weight: 630; }
+.project-link { display: inline; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 6px; transition: color .2s ease, text-decoration-color .2s ease; }
+.project-link-tail { white-space: nowrap; }
+.project-link svg { display: inline-block; width: .52em; height: .52em; margin-left: .12em; vertical-align: .12em; color: #f1bd69; }
+.project-link:hover { color: #a4f0ec; text-decoration-color: currentColor; }
 .project-description { max-width: 690px; margin: 16px 0 0; color: #b8ccca; font-size: 15px; line-height: 1.65; }
 .project-side { display: flex; align-items: start; justify-content: space-between; gap: 20px; }
 .project-side p { margin: 6px 0 0; color: #a9bfbd; font-size: 12px; line-height: 1.65; }
