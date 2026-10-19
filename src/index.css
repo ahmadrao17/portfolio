@@ -1,7 +1,7 @@
 :root {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #142b34;
-  background: #fff;
+  color: #edf6f4;
+  background: #0b1719;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -18,7 +18,7 @@ img { display: block; max-width: 100%; }
 :focus-visible { outline: 3px solid #e7ac4f; outline-offset: 4px; }
 
 .page-width { width: min(100% - 96px, 1320px); margin-inline: auto; }
-.skip-link { position: absolute; z-index: 20; top: -60px; left: 20px; background: #fff; padding: 12px 18px; }
+.skip-link { position: absolute; z-index: 20; top: -60px; left: 20px; background: #edf6f4; color: #0b1719; padding: 12px 18px; }
 .skip-link:focus { top: 12px; }
 
 .site-header { height: 72px; background: #071b29; position: relative; z-index: 10; border-bottom: 1px solid #193d50; }
@@ -52,44 +52,44 @@ img { display: block; max-width: 100%; }
 .text-link { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 730; transition: gap .2s ease; }
 .text-link:hover { gap: 15px; }
 .hero-text-link { color: #fff; }
-.intro-band { padding: 80px 0 100px; background: #f1f6f5; }
+.intro-band { padding: 80px 0 100px; background: #132a2a; }
 .intro-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 50px; }
-.section-kicker { color: #087f86; }
+.section-kicker { color: #73e3e2; }
 .intro-grid h2, .section-heading h2, .experience-intro h2, .capabilities-section h2 { max-width: 900px; margin: 0; font-size: clamp(36px, 3.9vw, 58px); line-height: 1.12; font-weight: 650; letter-spacing: 0; }
-.intro-grid p:not(.eyebrow) { max-width: 770px; margin: 28px 0 0; color: #52666d; font-size: 17px; line-height: 1.75; }
+.intro-grid p:not(.eyebrow) { max-width: 770px; margin: 28px 0 0; color: #b8ccca; font-size: 17px; line-height: 1.75; }
 
-.work-section { padding: 104px 0 112px; background: #fff; }
+.work-section { padding: 104px 0 112px; background: #0b1719; }
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 50px; margin-bottom: 54px; }
 .section-heading h2 { margin-top: 20px; }
-.section-heading > p { max-width: 270px; color: #63767c; font-size: 14px; line-height: 1.65; margin: 0 0 5px; }
-.project-list { border-top: 1px solid #cfdbdd; }
-.project-row { display: grid; grid-template-columns: 75px minmax(0, 1fr) minmax(180px, 300px); gap: 16px; padding: 37px 0 43px; border-bottom: 1px solid #cfdbdd; }
-.project-number { color: #6d9198; font-size: 13px; font-weight: 700; padding-top: 6px; }
-.project-domain { color: #087f86; font-size: 11px; font-weight: 750; text-transform: uppercase; margin: 0 0 12px; }
+.section-heading > p { max-width: 270px; color: #a9bfbd; font-size: 14px; line-height: 1.65; margin: 0 0 5px; }
+.project-list { border-top: 1px solid #365354; }
+.project-row { display: grid; grid-template-columns: 75px minmax(0, 1fr) minmax(180px, 300px); gap: 16px; padding: 37px 0 43px; border-bottom: 1px solid #365354; }
+.project-number { color: #f1bd69; font-size: 13px; font-weight: 700; padding-top: 6px; }
+.project-domain { color: #73e3e2; font-size: 11px; font-weight: 750; text-transform: uppercase; margin: 0 0 12px; }
 .project-main h3 { margin: 0; font-size: clamp(31px, 3.4vw, 48px); line-height: 1.08; font-weight: 630; }
-.project-description { max-width: 690px; margin: 16px 0 0; color: #596e73; font-size: 15px; line-height: 1.65; }
+.project-description { max-width: 690px; margin: 16px 0 0; color: #b8ccca; font-size: 15px; line-height: 1.65; }
 .project-side { display: flex; align-items: start; justify-content: space-between; gap: 20px; }
-.project-side p { margin: 6px 0 0; color: #65777b; font-size: 12px; line-height: 1.65; }
+.project-side p { margin: 6px 0 0; color: #a9bfbd; font-size: 12px; line-height: 1.65; }
 
-.experience-section { padding: 107px 0 115px; background: #e9f2f2; }
+.experience-section { padding: 107px 0 115px; background: #162a2d; }
 .experience-grid { display: grid; grid-template-columns: minmax(250px, .82fr) minmax(0, 1.18fr); gap: 90px; }
 .experience-intro h2 { margin: 19px 0 20px; }
-.experience-intro > p:not(.eyebrow) { max-width: 360px; color: #586d72; font-size: 16px; line-height: 1.7; }
-.dark-link { color: #087f86; margin-top: 22px; }
-.timeline { border-top: 1px solid #bfd2d5; }
-.timeline-item { display: grid; grid-template-columns: 145px minmax(0,1fr); gap: 28px; padding: 27px 0 31px; border-bottom: 1px solid #bfd2d5; }
-.timeline-years { color: #627c81; font-size: 12px; font-weight: 700; padding-top: 5px; white-space: nowrap; }
+.experience-intro > p:not(.eyebrow) { max-width: 360px; color: #b8ccca; font-size: 16px; line-height: 1.7; }
+.dark-link { color: #73e3e2; margin-top: 22px; }
+.timeline { border-top: 1px solid #3c585a; }
+.timeline-item { display: grid; grid-template-columns: 145px minmax(0,1fr); gap: 28px; padding: 27px 0 31px; border-bottom: 1px solid #3c585a; }
+.timeline-years { color: #aac6c6; font-size: 12px; font-weight: 700; padding-top: 5px; white-space: nowrap; }
 .timeline-item h3 { margin: 0 0 4px; font-size: 20px; font-weight: 650; }
-.timeline-company { margin: 0 0 13px !important; color: #087f86 !important; font-size: 13px !important; font-weight: 730; }
-.timeline-item p { margin: 0; color: #596e73; font-size: 14px; line-height: 1.62; }
+.timeline-company { margin: 0 0 13px !important; color: #73e3e2 !important; font-size: 13px !important; font-weight: 730; }
+.timeline-item p { margin: 0; color: #b8ccca; font-size: 14px; line-height: 1.62; }
 
-.capabilities-section { padding: 103px 0 113px; }
+.capabilities-section { padding: 103px 0 113px; background: #102021; }
 .capabilities-section h2 { margin: 18px 0 45px; }
 .capabilities-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 35px; }
-.capability { border-top: 2px solid #173c4b; padding-top: 20px; }
-.capability-number { color: #087f86; font-size: 12px; font-weight: 750; }
+.capability { border-top: 2px solid #3f7778; padding-top: 20px; }
+.capability-number { color: #f1bd69; font-size: 12px; font-weight: 750; }
 .capability h3 { font-size: 22px; font-weight: 650; margin: 33px 0 14px; }
-.capability p { max-width: 340px; color: #62767b; font-size: 14px; line-height: 1.7; margin: 0; }
+.capability p { max-width: 340px; color: #b8ccca; font-size: 14px; line-height: 1.7; margin: 0; }
 
 .contact-section { background: #082333; color: #fff; padding: 94px 0 105px; border-top: 3px solid #2bc9cf; }
 .contact-inner { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
