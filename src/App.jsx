@@ -116,8 +116,8 @@ function App() {
           </a>
 
           <nav className={`site-nav ${menuOpen ? 'is-open' : ''}`} aria-label="Main navigation" id="main-nav">
-            <a href="#work" onClick={closeMenu}>Work</a>
             <a href="#about" onClick={closeMenu}>About</a>
+            <a href="#work" onClick={closeMenu}>Work</a>
             <a href="#experience" onClick={closeMenu}>Experience</a>
             <a href="#contact" onClick={closeMenu}>Contact</a>
           </nav>
