@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import {
   ArrowDownRight,
-  ArrowRight,
   ArrowUpRight,
   Download,
   Mail,
@@ -292,7 +291,6 @@ function App() {
               <p>I'm always glad to talk about thoughtful products, backend engineering, and useful automation.</p>
               <a className="contact-email" href={`mailto:${email}`}>{email}<ArrowUpRight size={27} strokeWidth={1.5} aria-hidden="true" /></a>
             </div>
-            <ArrowRight className="contact-arrow" size={110} strokeWidth={0.8} aria-hidden="true" />
           </div>
         </section>
       </main>
