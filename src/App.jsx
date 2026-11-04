@@ -2,9 +2,14 @@ import { useState } from 'react'
 import {
   ArrowDownRight,
   ArrowUpRight,
+  AudioLines,
+  BookOpenText,
   Download,
+  FileQuestion,
   Mail,
   Menu,
+  MessageSquareText,
+  Share2,
   X,
 } from 'lucide-react'
 
@@ -19,6 +24,7 @@ const projects = [
       'Building role-specific review queues, KYC dossiers, screening workflows, and auditable forms for a multi-tenant Swiss AML platform.',
     focus: ['Django', 'DRF', 'React', 'TypeScript'],
     url: 'https://www.gwg-plattform.ch/en/home-2/',
+    visual: 'projects/gwg-dashboard.png',
   },
   {
     number: '02',
@@ -28,6 +34,7 @@ const projects = [
       'Automating claims, eligibility, inventory, and order workflows across optical practice systems, EHRs, and insurers.',
     focus: ['Django', 'Selenium', 'Celery', 'React'],
     url: 'https://spexbot.com/',
+    visual: 'projects/spexbot.jpg',
   },
   {
     number: '03',
@@ -37,6 +44,7 @@ const projects = [
       'Building onboarding and organization-owned content workflows, and improving Stripe checkout and webhook behavior.',
     focus: ['Django', 'Celery', 'PostgreSQL', 'Stripe'],
     url: 'https://www.allthethingstodoeverywhere.com/home',
+    visual: 'projects/attde.jpg',
   },
   {
     number: '04',
@@ -46,6 +54,7 @@ const projects = [
       'Built provider discovery with location, age, rating, and provider filters, plus favorites, follows, reviews, and Firebase features.',
     focus: ['Flutter', 'Firebase', 'Firestore'],
     url: 'https://play.google.com/store/apps/details?id=com.flock.team.app',
+    visual: 'projects/gaggle.jpg',
   },
   {
     number: '05',
@@ -55,6 +64,7 @@ const projects = [
       'Developed a cross-platform recitation player with downloads, favorites, repeat playback, and in-app purchases.',
     focus: ['Flutter', 'Firebase', 'In-app purchases'],
     url: 'https://play.google.com/store/apps/details?id=com.ahsan.audioquran&hl=en',
+    visual: 'projects/audio-quran.jpg',
   },
   {
     number: '06',
@@ -64,6 +74,7 @@ const projects = [
       'Rebuilt an Islamic reference app in Flutter with recitation, Ayat search, multilingual content, and Tafseer lectures.',
     focus: ['Flutter', 'Dart', 'Mobile'],
     url: 'https://play.google.com/store/apps/details?id=com.app.drisrar&hl=en',
+    visual: 'projects/bayan-ul-quran.jpg',
   },
   {
     number: '07',
@@ -72,6 +83,7 @@ const projects = [
     description:
       'Built a voice and chat agent for product questions, with Flask and Odoo integrations for knowledge updates and lead creation.',
     focus: ['OpenAI API', 'ElevenLabs', 'Flask', 'Odoo'],
+    concept: 'voice',
   },
   {
     number: '08',
@@ -80,6 +92,7 @@ const projects = [
     description:
       'Created a website assistant using a structured company profile and retrieval-augmented responses to guide visitors.',
     focus: ['OpenAI API', 'RAG', 'Chatbot'],
+    concept: 'chat',
   },
   {
     number: '09',
@@ -88,6 +101,7 @@ const projects = [
     description:
       'Turned uploaded course material into multiple-choice tests through a Flask API that returns formatted Excel files.',
     focus: ['Python', 'Flask', 'OpenAI API'],
+    concept: 'tests',
   },
   {
     number: '10',
@@ -96,6 +110,7 @@ const projects = [
     description:
       'Created reusable scripts for assistant setup, knowledge-file ingestion, instruction updates, and support-conversation tests.',
     focus: ['Python', 'OpenAI API', 'Vector stores'],
+    concept: 'knowledge',
   },
   {
     number: '11',
@@ -104,6 +119,7 @@ const projects = [
     description:
       'Structured a social feed backend around users, content, permissions, serializers, and REST endpoints.',
     focus: ['Django', 'DRF', 'django-filter'],
+    concept: 'feed',
   },
 ]
 
@@ -121,6 +137,21 @@ const capabilities = [
     items: 'React, Flutter, debugging, testing, collaboration, production support',
   },
 ]
+
+const focusAreas = [
+  { number: '01', title: 'Backend systems', description: 'Reliable APIs, data models, and workflows.' },
+  { number: '02', title: 'Automation', description: 'Useful integrations that remove repetitive work.' },
+  { number: '03', title: 'Product delivery', description: 'Features carried from requirements to release.' },
+  { number: '04', title: 'Collaboration', description: 'Clear conversations with clients and teams.' },
+]
+
+const conceptIcons = {
+  voice: AudioLines,
+  chat: MessageSquareText,
+  tests: FileQuestion,
+  knowledge: BookOpenText,
+  feed: Share2,
+}
 
 function SocialLink({ href, label, children }) {
   return (
@@ -144,6 +175,49 @@ function ProjectTitle({ project }) {
   )
 }
 
+function ProjectVisual({ project }) {
+  if (project.visual) {
+    return (
+      <div className={`project-visual project-visual-${project.number}`}>
+        <img src={`${import.meta.env.BASE_URL}${project.visual}`} alt={`Public preview of ${project.name}`} loading="lazy" />
+        <span className="visual-caption">Public product preview</span>
+      </div>
+    )
+  }
+
+  const Icon = conceptIcons[project.concept]
+  return (
+    <div className={`project-visual concept-visual concept-${project.concept}`} role="img" aria-label={`Illustration of ${project.domain.toLowerCase()}`}>
+      <span className="visual-caption">Concept illustration</span>
+      <div className="concept-orbit concept-orbit-one" />
+      <div className="concept-orbit concept-orbit-two" />
+      <div className="concept-window">
+        <div className="concept-window-top"><i /><i /><i /></div>
+        <div className="concept-window-body">
+          <span className="concept-mark"><Icon size={38} strokeWidth={1.5} aria-hidden="true" /></span>
+          <span className="concept-lines"><i /><i /><i /></span>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function ProjectCard({ project, featured = false }) {
+  return (
+    <article className={`project-card${featured ? ' project-card-featured' : ''}`}>
+      <ProjectVisual project={project} />
+      <div className="project-content">
+        <div className="project-meta"><span>{project.number} / {project.domain}</span></div>
+        <h3><ProjectTitle project={project} /></h3>
+        <p className="project-description">{project.description}</p>
+        <div className="project-tags" aria-label="Technologies">
+          {project.focus.map((item) => <span key={item}>{item}</span>)}
+        </div>
+      </div>
+    </article>
+  )
+}
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -163,6 +237,7 @@ function App() {
             <a href="#about" onClick={closeMenu}>About</a>
             <a href="#work" onClick={closeMenu}>Work</a>
             <a href="#experience" onClick={closeMenu}>Experience</a>
+            <a href="#stack" onClick={closeMenu}>Stack</a>
             <a href="#contact" onClick={closeMenu}>Contact</a>
           </nav>
 
@@ -203,8 +278,21 @@ function App() {
               </div>
             </div>
             <div className="hero-art" aria-hidden="true">
-              <img src={`${import.meta.env.BASE_URL}portfolio-hero-v2.png`} alt="" />
+              <img src={`${import.meta.env.BASE_URL}hero-systems.png`} alt="" />
+              <span className="hero-art-label">Systems / Automation / Delivery</span>
             </div>
+          </div>
+        </section>
+
+        <section className="focus-strip" aria-label="Areas of work">
+          <div className="page-width focus-grid">
+            {focusAreas.map((area) => (
+              <div className="focus-item" key={area.number}>
+                <span>{area.number}</span>
+                <h2>{area.title}</h2>
+                <p>{area.description}</p>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -223,24 +311,19 @@ function App() {
             <div className="section-heading">
               <div>
                 <p className="eyebrow section-kicker"><span className="eyebrow-line" /> Project work</p>
-                <h2 id="work-title">Built for real-world use.</h2>
+                <h2 id="work-title">Selected work<span className="heading-period">.</span></h2>
               </div>
               <p>Platforms, APIs, and automation across business, healthcare, education, and mobile products.</p>
             </div>
-            <div className="project-list">
-              {projects.map((project) => (
-                <article className="project-row" key={project.name}>
-                  <span className="project-number">{project.number}</span>
-                  <div className="project-main">
-                    <p className="project-domain">{project.domain}</p>
-                    <h3><ProjectTitle project={project} /></h3>
-                    <p className="project-description">{project.description}</p>
-                  </div>
-                  <div className="project-side">
-                    <p>{project.focus.join(' / ')}</p>
-                  </div>
-                </article>
-              ))}
+            <div className="featured-projects">
+              {projects.slice(0, 3).map((project) => <ProjectCard key={project.name} project={project} featured />)}
+            </div>
+            <div className="more-work-heading">
+              <p className="eyebrow section-kicker"><span className="eyebrow-line" /> More projects</p>
+              <p>Mobile apps, AI tools, and supporting APIs.</p>
+            </div>
+            <div className="project-grid">
+              {projects.slice(3).map((project) => <ProjectCard key={project.name} project={project} />)}
             </div>
           </div>
         </section>
@@ -270,7 +353,7 @@ function App() {
           </div>
         </section>
 
-        <section className="capabilities-section" aria-labelledby="capabilities-title">
+        <section className="capabilities-section" id="stack" aria-labelledby="capabilities-title">
           <div className="page-width">
             <p className="eyebrow section-kicker"><span className="eyebrow-line" /> Capabilities</p>
             <h2 id="capabilities-title">Core toolkit.</h2>
