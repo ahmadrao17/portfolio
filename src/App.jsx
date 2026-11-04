@@ -202,6 +202,9 @@ function App() {
                 <a className="text-link hero-text-link" href={`mailto:${email}`}>Get in touch <ArrowUpRight size={18} aria-hidden="true" /></a>
               </div>
             </div>
+            <div className="hero-art" aria-hidden="true">
+              <img src={`${import.meta.env.BASE_URL}portfolio-hero-v2.png`} alt="" />
+            </div>
           </div>
         </section>
 
