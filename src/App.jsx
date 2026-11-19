@@ -192,7 +192,7 @@ function App() {
       <a className="skip-link" href="#main">Skip to content</a>
       <header className="site-header" id="top">
         <div className="header-inner page-width">
-          <a className="brand" href="#top" onClick={closeMenu} aria-label="Muhammad Ahmad, back to top"><span className="brand-mark">MA<span>.</span></span><span className="brand-name">Muhammad Ahmad</span></a>
+          <a className="brand" href="#top" onClick={closeMenu} aria-label="Muhammad Ahmad, back to top"><img className="brand-mark" src={`${base}logo-mark.svg`} width="46" height="46" alt="" /><span className="brand-name">Muhammad Ahmad</span></a>
           <nav className={`site-nav ${menuOpen ? 'is-open' : ''}`} id="main-nav" aria-label="Main navigation">
             <a href="#about" onClick={closeMenu}>About</a>
             <a href="#work" onClick={closeMenu}>Work</a>

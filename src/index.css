@@ -41,8 +41,7 @@ section[id] { scroll-margin-top: 78px; }
 .site-header { position: sticky; top: 0; z-index: 100; height: 72px; border-bottom: 1px solid var(--line); background: rgba(24, 27, 25, .97); backdrop-filter: blur(12px); }
 .header-inner { display: flex; align-items: center; gap: 36px; height: 100%; }
 .brand { display: inline-flex; align-items: center; gap: 13px; min-height: 48px; font-size: 15px; font-weight: 720; white-space: nowrap; }
-.brand-mark { display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid rgba(214, 169, 133, .68); border-radius: 10px; font-size: 15px; font-weight: 760; letter-spacing: -.07em; }
-.brand-mark span { color: #d6a985; }
+.brand-mark { display: block; flex: 0 0 46px; width: 46px; height: 46px; }
 .site-nav { display: flex; align-items: center; gap: clamp(12px, 1.8vw, 27px); margin-left: auto; }
 .site-nav a { display: inline-flex; align-items: center; min-height: 48px; padding-inline: 6px; color: #cbd0c5; font-size: 14px; transition: color .2s ease; }
 .site-nav a:hover, .site-nav a:focus-visible { color: #fff; }
@@ -235,7 +234,6 @@ section[id] { scroll-margin-top: 78px; }
   .footer-inner > span:last-child { width: 100%; }
 }
 @media (max-width: 360px) {
-  .brand-name { display: none; }
   .brand { padding-inline: 4px; }
   .hero h1 { font-size: 53px; }
   .index-project { grid-template-columns: 72px minmax(0, 1fr); gap: 12px; }
