@@ -22,7 +22,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+html { scroll-behavior: smooth; }
 html { scrollbar-color: #6d7468 #181b19; }
 body { min-width: 320px; margin: 0; }
 button, a { -webkit-tap-highlight-color: rgba(158, 91, 59, .26); touch-action: manipulation; }
@@ -33,7 +33,6 @@ img { display: block; max-width: 100%; }
 :focus-visible { outline: 3px solid #d6a985; outline-offset: 4px; }
 h1, h2, h3, h4, p { margin-top: 0; }
 h1, h2, h3, h4 { text-wrap: balance; }
-section[id] { scroll-margin-top: 78px; }
 .page-width { width: min(calc(100% - 64px), var(--container)); margin-inline: auto; }
 .skip-link { position: fixed; z-index: 200; top: -72px; left: 16px; display: flex; align-items: center; min-height: 48px; padding: 0 16px; color: var(--deep); background: #fff; }
 .skip-link:focus { top: 12px; }
